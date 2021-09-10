@@ -4,15 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Garage {
-    private static final Garage instance = new Garage();
     private final Map<Car, Integer> carMap;
 
-    private Garage() {
+    public Garage() {
         carMap = new HashMap<>();
-    }
-
-    public static Garage getInstance() {
-        return instance;
     }
 
     public void parkCar(Car car) {

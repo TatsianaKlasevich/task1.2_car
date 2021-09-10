@@ -3,13 +3,10 @@ package com.klasevich.car.task.main;
 import com.klasevich.car.task.entity.*;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        Map<Car, Integer> carMap = new HashMap<>();
         List<Car> cars = new ArrayList<>();
         cars.add(new Coupe("BMV", "6", 2011, Color.BLACK, 220));
         cars.add(new Coupe("Audi", "A5", 2013, Color.WHITE, 240));
@@ -31,7 +28,7 @@ public class Main {
         cars.add(new Universal("Honda", "Shuttle", 2012, Color.GREY, CarClass.D));
 
         //filling the garage
-        Garage garage = Garage.getInstance();
+        Garage garage = new Garage();
         for (Car car : cars) {
             garage.parkCar(car);
         }
